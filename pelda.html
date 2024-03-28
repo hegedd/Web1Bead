@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css">
+      div.regb {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+        background-color: rgb(183, 190, 199); }
+      input {
+        width: 165px; }
+      input.gm{
+        background-color: rgb(110, 129, 131); }
+      input.gt{
+        background-color: rgb(223, 232, 233); }
+    </style>
+  </head>
+  <body>
+    <div class="regb">
+      <form action = "index.old.php?page=belepes" method = "post">
+        <fieldset>
+          <legend>Bejlentkezés</legend>
+          <br>
+          <input class="gt" type="text" name="felhasznalo" placeholder="Felhasználó név" required><br><br>
+          <input class="gt" type="password" name="jelszo" placeholder="Jelszó" required><br><br>
+          <input class="gm" type="submit" name="belepes" value="Belépés">
+          <br>&nbsp;
+        </fieldset>
+      </form>
+      </div>
+      <div class="regb">
+      <form action = "index.old.php?page=regisztral" method = "post">
+        <fieldset>
+          <legend>Regisztráció</legend>
+          <br>
+          <input class="gt" type="text" name="vezeteknev" placeholder="Vezetéknév" required><br><br>
+          <input class="gt" type="text" name="utonev" placeholder="Utónév" required><br><br>
+          <input class="gt" type="text" name="felhasznalo" placeholder="Felhasználó név" required><br><br>
+          <input class="gt" type="password" name="jelszo" placeholder="Jelszó" required><br><br>
+          <input class="gm" type="submit" name="regisztracio" value="Regisztráció">
+          <br>&nbsp;
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

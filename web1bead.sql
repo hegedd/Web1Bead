@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2022. Ápr 24. 18:22
--- Kiszolgáló verziója: 10.4.18-MariaDB
--- PHP verzió: 8.0.3
+-- Gép: mysql.omega:3306
+-- Létrehozás ideje: 2024. Már 28. 19:13
+-- Kiszolgáló verziója: 5.7.42-log
+-- PHP verzió: 7.2.34-43+0~20230902.90+debian12~1.gbpc2a431
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `web1bead`
 --
-CREATE DATABASE IF NOT EXISTS `web1bead` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci;
+CREATE DATABASE IF NOT EXISTS `web1bead` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `web1bead`;
 
 -- --------------------------------------------------------
@@ -65,8 +65,8 @@ CREATE TABLE `uzenet` (
   `id` int(11) NOT NULL,
   `nev` varchar(45) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL DEFAULT 'Vendég',
   `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL DEFAULT '',
-  `uzenet` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL DEFAULT '',
-  `datum` timestamp NOT NULL DEFAULT current_timestamp()
+  `uzenet` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `datum` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -78,7 +78,10 @@ INSERT INTO `uzenet` (`id`, `nev`, `email`, `uzenet`, `datum`) VALUES
 (2, 'Vendég', 'mano@mano.hu', 'afsddfsa', '2022-04-23 17:54:05'),
 (3, 'Vendég', 'hekale@freemail.hu', 'fffff', '2022-04-23 17:54:23'),
 (4, 'Vendég', 'tredet@gtr.hu', 'hhhh', '2022-04-23 18:11:31'),
-(5, 'Családi_1 Utónév_1', 'jztr@freemail.hu', 'ffffff', '2022-04-23 18:14:27');
+(5, 'Családi_1 Utónév_1', 'jztr@freemail.hu', 'ffffff', '2022-04-23 18:14:27'),
+(22, 'aaaaaaa', 'aaaaa@aaaa.aa', 'aaaaaaaaaaa', '2024-03-24 12:41:13'),
+(23, 'asdasd', 'fsdaree@gg.ff', 'dasd', '2024-03-24 18:09:06'),
+(24, '1247457', '1414@4141.ljk', 'hjkljkh', '2024-03-24 18:14:14');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -110,7 +113,7 @@ ALTER TABLE `felhasznalok`
 -- AUTO_INCREMENT a táblához `uzenet`
 --
 ALTER TABLE `uzenet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
